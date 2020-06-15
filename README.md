@@ -1,5 +1,10 @@
 # BB-CS-GO-Custom-Weapons
 
+## Natives
+You can look here to see the [natives](https://github.com/ismail0234/BB-CS-GO-Custom-Weapons/blob/master/scripting/include/customweapons.inc).
+
+## Road Map
+
 ### Completed
 - [x] When the weapon is drop, it changes its model.
 - [x] When the weapon is taken, other players see the model.
