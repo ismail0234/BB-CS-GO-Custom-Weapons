@@ -7,7 +7,7 @@ AlliedModders Thread: https://forums.alliedmods.net/showthread.php?p=2704603
 You can look here to see the [natives](https://github.com/ismail0234/BB-CS-GO-Custom-Weapons/blob/master/scripting/include/customweapons.inc).
 
 ## Demo Plugin
-You can look here to see the [demo plugin](https://raw.githubusercontent.com/ismail0234/BB-CS-GO-Custom-Weapons/master/scripting/weapon_crossbow.sp).
+You can look here to see the [demo plugin](https://github.com/ismail0234/BB-CS-GO-Custom-Weapons/blob/master/scripting/weapon_crossbow.sp).
 
 ## Road Map
 
