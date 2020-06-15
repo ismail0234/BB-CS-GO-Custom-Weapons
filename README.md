@@ -9,6 +9,10 @@ You can look here to see the [natives](https://github.com/ismail0234/BB-CS-GO-Cu
 ## Demo Plugin
 You can look here to see the [demo plugin](https://github.com/ismail0234/BB-CS-GO-Custom-Weapons/blob/master/scripting/weapon_crossbow.sp).
 
+## Crossbow Demo Video
+
+https://www.youtube.com/watch?v=pr5Z_PIneIw
+
 ## Road Map
 
 ### Completed
