@@ -1,7 +1,13 @@
-# BB-CS-GO-Custom-Weapons
+# BB CSGO Custom Weapon (Alpha v.0.1)
+I am adding custom weapon models on CSGO. The results are really good. The crossbow below works like half life. I am not finished completely at the alpha stage yet. The plugin works without any other dependencies (Such as DHook or Ptah). I'm still working on this in my spare time since there are still a few things I have to do. I think of sharing this plugin in beta version according to the Supply/Demand ratio. Are there any features you want added?
+
+AlliedModders Thread: https://forums.alliedmods.net/showthread.php?p=2704603
 
 ## Natives
 You can look here to see the [natives](https://github.com/ismail0234/BB-CS-GO-Custom-Weapons/blob/master/scripting/include/customweapons.inc).
+
+## Demo Plugin
+You can look here to see the [demo plugin](https://raw.githubusercontent.com/ismail0234/BB-CS-GO-Custom-Weapons/master/scripting/weapon_crossbow.sp).
 
 ## Road Map
 
