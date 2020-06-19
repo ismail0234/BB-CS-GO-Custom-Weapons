@@ -51,6 +51,15 @@ methodmap CustomWeapon < ArrayList
 
 	/**
 	 *
+	 * Silahın seslerini ekler.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void AddSound(char[] sound);
+
+	/**
+	 *
 	 * Silahın Görünüm modelini değiştir.
 	 *
 	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
