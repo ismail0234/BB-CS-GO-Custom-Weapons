@@ -11,7 +11,7 @@
  * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
  *
  */
-methodmap CustomWeaponx < ArrayList
+methodmap CustomWeapon < ArrayList
 {
 	/**
 	 *
@@ -20,7 +20,7 @@ methodmap CustomWeaponx < ArrayList
 	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
 	 *
 	 */
-	public native CustomWeaponx(char[] weapon);
+	public native CustomWeapon(char[] weapon);
 
 	/**
 	 *
