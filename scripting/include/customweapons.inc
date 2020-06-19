@@ -6,84 +6,130 @@
 
 /**
  *
- * Silah modellerini ekler.
+ * Özel silah kaydı yapmak için kullanılır.
  *
  * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
  *
  */
-native void CS_RegisterWeapon(char[] name, char[] weapon, char[] viewModel, char[] worldModel, char[] droppedModel);
+methodmap CustomWeaponx
+{
+	/**
+	 *
+	 * Sınıfı başlatır.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native CustomWeaponx(char[] weapon);
 
-/**
- *
- * Silahın ebeveyn modelini değiştirir.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native void CS_SetParentWeapon(char[] weapon, char[] parentweapon);
+	/**
+	 *
+	 * Silahın özel kodunu değiştirir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetCode(char[] weapon);
 
-/**
- *
- * Silah seslerini ekler.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_RegisterWeaponSound(char[] sound);
+	/**
+	 *
+	 * Silahın adını değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetName(char[] name);
 
-/**
- *
- * Silahın varsayılan cephanelerini ayarlar.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponDefaultAmmo(char[] weapon, int leftAmmo, int rightAmmo, int rightAmmoMax);
+	/**
+	 *
+	 * Silahın ebeveyn silahını değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetParentWeapon(char[] weapon);
 
-/**
- *
- * Silahın saldırı animasyonunu değiştirir
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponAnimationAttack(char[] weapon, int sequenceId, int sequenceId2, float time);
+	/**
+	 *
+	 * Silahın Görünüm modelini değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetViewModel(char[] viewModel);
 
-/**
- *
- * Silahın jarjör değiştirme animasyonunu değiştirir
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponAnimationReload(char[] weapon, int sequenceId, float time);
+	/**
+	 *
+	 * Silahın dünya modelini değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetWorldModel(char[] worldModel);
 
-/**
- *
- * Silahın inceleme animasyonunu ayarlar.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponAnimationLAW(char[] weapon, int sequenceId, float time);
+	/**
+	 *
+	 * Silahın düşme modelini değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetDroppedModel(char[] droppedModel);
 
-/**
- *
- * Silahın açılma animasyonunu değiştirir
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponAnimationDraw(char[] weapon, int sequenceId, float time);
+	/**
+	 *
+	 * Silahın varsayılan cephane değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetDefaultAmmo(int leftAmmo, int rightAmmo, int rightAmmoMax);
 
-/**
- *
- * Silahın max zoom seviyesini ayarlar
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native bool CS_SetWeaponMaxZoom(char[] weapon, int maxzoom);
+	/**
+	 *
+	 * Silahın dürbün zoom seviyesini değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetMaxZoom(int level);
+
+	/**
+	 *
+	 * Silahın Çekme animasyonunu değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetAnimationDraw(int sequence, float time);
+
+	/**
+	 *
+	 * Silahın jarjör değiştirme animasyonunu değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetAnimationReload(int sequence, float time);
+
+	/**
+	 *
+	 * Silahın birincil saldırı animasyonunu değiştir.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetAnimationPrimaryAttack(int sequence1, int sequence2, float time);
+
+	/**
+	 *
+	 * Silahın kaydını tamamlar.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void Register();
+}
 
 /**
  *
