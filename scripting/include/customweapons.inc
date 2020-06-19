@@ -130,21 +130,3 @@ methodmap CustomWeapon
 	 */
 	public native void Register();
 }
-
-/**
- *
- * Oyuncuya özel silah verir.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-native int CS_GivePlayerItem(int client, char[] weapon);
-
-/**
- *
- * Özel silahların birincil ateş kancası.
- *
- * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
- *
- */
-forward void CS_OnWeaponPrimaryAttack(int client, int weaponId, int weaponIndex, float time, int leftAmmo);
