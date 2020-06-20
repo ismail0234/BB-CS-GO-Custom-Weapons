@@ -101,7 +101,7 @@ methodmap CustomWeapon < ArrayList
 	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
 	 *
 	 */
-	public native void SetMaxZoom(int level);
+	public native void SetMaxZoomLevel(int level);
 
 	/**
 	 *
