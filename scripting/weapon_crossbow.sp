@@ -69,34 +69,33 @@ public void OnPluginStart()
 	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.vvd");
 
 	PrecacheModel("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
-
-	CS_RegisterWeapon(
-		"Cross Bow",
-		"weapon_crossbow",
-		"models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl",
-		"models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl",
-		"models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl"
-	);
-
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_foley1.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_foley2.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_foley3.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_foley4.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbowex_draw.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow-1.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_explode3.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_explode4.wav");
-	CS_RegisterWeaponSound("weapons/eminem/advanced_crossbow/crossbow_explode5.wav");
-
-	CS_SetParentWeapon("weapon_crossbow", "weapon_awp");
-
-  	CS_SetWeaponDefaultAmmo("weapon_crossbow", WEAPON_AMMO_LEFT, WEAPON_AMMO_RIGHT, WEAPON_AMMO_RIGHT_MAX);
 	
-	CS_SetWeaponAnimationDraw("weapon_crossbow", WEAPON_ANIMATION_DRAW_SEQUENCE, WEAPON_ANIMATION_DRAW_SEQUENCE_TIME);
-	CS_SetWeaponAnimationAttack("weapon_crossbow", WEAPON_ANIMATION_ATTACK_1_SEQUENCE, WEAPON_ANIMATION_ATTACK_2_SEQUENCE, WEAPON_ANIMATION_ATTACK_SEQUENCE_TIME);
-	CS_SetWeaponAnimationReload("weapon_crossbow", WEAPON_ANIMATION_RELOAD_SEQUENCE, WEAPON_ANIMATION_RELOAD_SEQUENCE_TIME);
+	CustomWeapon weapon = new CustomWeapon(code);
 
-	CS_SetWeaponMaxZoom("weapon_crossbow", WEAPON_MAX_ZOOM); 
+        weapon.SetName("Cross Bow");
+        weapon.SetViewModel("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl");
+        weapon.SetWorldModel("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl");
+        weapon.SetDroppedModel("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl");
+
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley1.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley2.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley3.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley4.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbowex_draw.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow-1.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode3.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode4.wav");
+        weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode5.wav");
+
+        weapon.SetParentWeapon("weapon_awp");
+        weapon.SetDefaultAmmo(WEAPON_AMMO_LEFT, WEAPON_AMMO_RIGHT, WEAPON_AMMO_RIGHT_MAX);
+        weapon.SetMaxZoom(WEAPON_MAX_ZOOM);
+
+        weapon.SetAnimationDraw(WEAPON_ANIMATION_DRAW_SEQUENCE, WEAPON_ANIMATION_DRAW_SEQUENCE_TIME);
+        weapon.SetAnimationPrimaryAttack(WEAPON_ANIMATION_ATTACK_1_SEQUENCE, WEAPON_ANIMATION_ATTACK_2_SEQUENCE, WEAPON_ANIMATION_ATTACK_SEQUENCE_TIME);
+        weapon.SetAnimationReload(WEAPON_ANIMATION_RELOAD_SEQUENCE, WEAPON_ANIMATION_RELOAD_SEQUENCE_TIME);
+
+        weapon.Register();
 }
 
 /**
