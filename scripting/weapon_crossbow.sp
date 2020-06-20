@@ -70,7 +70,7 @@ public void OnPluginStart()
 
 	PrecacheModel("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
 	
-	CustomWeapon weapon = new CustomWeapon(code);
+	CustomWeapon weapon = new CustomWeapon("weapon_crossbow");
 
         weapon.SetName("Cross Bow");
         weapon.SetViewModel("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl");
