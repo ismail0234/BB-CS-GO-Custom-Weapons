@@ -89,7 +89,7 @@ public void OnPluginStart()
 
         weapon.SetParentWeapon("weapon_awp");
         weapon.SetDefaultAmmo(WEAPON_AMMO_LEFT, WEAPON_AMMO_RIGHT, WEAPON_AMMO_RIGHT_MAX);
-        weapon.SetMaxZoom(WEAPON_MAX_ZOOM);
+        weapon.SetMaxZoomLevel(WEAPON_MAX_ZOOM);
 
         weapon.SetAnimationDraw(WEAPON_ANIMATION_DRAW_SEQUENCE, WEAPON_ANIMATION_DRAW_SEQUENCE_TIME);
         weapon.SetAnimationPrimaryAttack(WEAPON_ANIMATION_ATTACK_1_SEQUENCE, WEAPON_ANIMATION_ATTACK_2_SEQUENCE, WEAPON_ANIMATION_ATTACK_SEQUENCE_TIME);
