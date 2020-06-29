@@ -32,6 +32,8 @@ https://www.youtube.com/watch?v=pr5Z_PIneIw
 
 ### Uncompleted
 
+- [ ] Explosion Add Custom Sound.
+- [ ] Bullet Add Custom Sound.
 - [ ] OOP Design Plugin.
 - [ ] Change the weapon name in the slots.
 - [ ] The world model of the weapon does not change when the new round begins. (Bug)
