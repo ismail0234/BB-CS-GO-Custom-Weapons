@@ -139,3 +139,68 @@ methodmap CustomWeapon < ArrayList
 	 */
 	public native int Register();
 }
+
+
+/**
+ *
+ * Özel silahlar'ın mermilerini oluşturmak için kullanılır.
+ *
+ * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+ *
+ */
+methodmap Bullet < ArrayList
+{
+	/**
+	 *
+	 * Sınıfı başlatır.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native Bullet();
+		
+	/**
+	 *
+	 * Merminin sahibini ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetOwner(int client);
+	
+	/**
+	 *
+	 * Merminin modelini ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetModel(char[] model);
+	
+	/**
+	 *
+	 * Merminin hızını ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetSpeed(float speed);
+	
+	/**
+	 *
+	 * Mermi'yi oluşturur.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native int Create();
+	
+	/**
+	 *
+	 * Mermiyi Ateşler
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native int Fire();
+}
