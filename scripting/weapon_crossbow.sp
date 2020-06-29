@@ -136,13 +136,13 @@ public Action Hook_CrossBowTouch(int entity, int target)
         GetEntPropVector(entity, Prop_Data, "m_vecAbsOrigin", origin);
 
         Explosion explosion = new Explosion();
-        explosion.setOrigin(origin);
-        explosion.setAttacker(attacker);
-        explosion.setWeapon("weapon_crossbow");
-        explosion.setSound(false);
-        explosion.setDamage(75);
-        explosion.setRadius(225);
-        explosion.create();
+        explosion.SetOrigin(origin);
+        explosion.SetOwner(attacker);
+        explosion.SetWeapon("weapon_crossbow");
+        explosion.SetDefaultSound(false);
+        explosion.SetDamage(75);
+        explosion.SetRadius(225);
+        explosion.Fire();
 
 		
 	char sound[155];
