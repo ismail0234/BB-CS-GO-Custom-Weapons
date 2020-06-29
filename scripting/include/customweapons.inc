@@ -204,3 +204,85 @@ methodmap Bullet < ArrayList
 	 */
 	public native int Fire();
 }
+
+/**
+ *
+ * Patlama efektleri oluşturmak için kullanılır.
+ *
+ * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+ *
+ */
+methodmap Explosion < ArrayList
+{
+	/**
+	 *
+	 * Sınıfı başlatır.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native Explosion();
+	
+	/**
+	 *
+	 * Patlamanın merkezini ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetOrigin(float origin[3]);
+	
+	/**
+	 *
+	 * Patlamanın sahibini ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetOwner(int client);
+	
+	/**
+	 *
+	 * Patlama silahını ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetWeapon(char[] weapon);
+	
+	/**
+	 *
+	 * Patlama varsayılan sesini ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetDefaultSound(bool isActive);
+	
+	/**
+	 *
+	 * Patlama hasarını ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetDamage(int damage);
+	
+	/**
+	 *
+	 * Patlama çapını ayarlar
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void SetRadius(int radius);
+	
+	/**
+	 *
+	 * Patlamayı Ateşler
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void Fire();
+}
