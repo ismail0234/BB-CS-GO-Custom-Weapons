@@ -32,6 +32,7 @@ https://www.youtube.com/watch?v=pr5Z_PIneIw
 
 ### Uncompleted
 
+- [ ] Automatically add model data to download table.
 - [ ] Explosion Add Custom Sound.
 - [ ] Bullet Add Custom Sound.
 - [ ] OOP Design Plugin.
