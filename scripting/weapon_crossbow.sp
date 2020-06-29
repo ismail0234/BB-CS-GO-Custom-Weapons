@@ -107,12 +107,12 @@ public void OnPluginStart()
  */
 public void CS_OnWeaponPrimaryAttack(int client, int weaponId, int weaponIndex, float time, int leftAmmo)
 {
-    Bullet bullet = new Bullet();
-    bullet.setOwner(client);
-    bullet.setModel("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
-    bullet.setSpeed(2500.0);
-    int bulletId = bullet.create();
-    bullet.fire();
+    	Bullet bullet = new Bullet();
+    	bullet.SetOwner(client);
+    	bullet.SetModel("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
+    	bullet.SetSpeed(2500.0);
+    	int bulletId = bullet.Create();
+    	bullet.Fire();
 
 	EmitSoundToAll("weapons/eminem/advanced_crossbow/crossbow-1.wav", bulletId);
 	SDKHook(bulletId, SDKHook_StartTouch, Hook_CrossBowTouch);
@@ -145,9 +145,9 @@ public Action Hook_CrossBowTouch(int entity, int target)
         explosion.create();
 
 		
-		char sound[155];
+	char sound[155];
      	FormatEx(sound, sizeof sound, "weapons/eminem/advanced_crossbow/crossbow_explode%d.wav", GetRandomInt(3, 5));
-		EmitAmbientSound(sound, origin);
+	EmitAmbientSound(sound, origin);
 
         RequestFrame(RemoveEntityById, entity);
     }
