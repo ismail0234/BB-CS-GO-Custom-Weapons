@@ -29,10 +29,10 @@ https://www.youtube.com/watch?v=pr5Z_PIneIw
 - [x] Zoom audio bug fixed.(Bug Fixed) - (08.06.2020)
 - [x] CS_SetParentWeapon will be added - (11.06.2020)
 - [x] Incorrect gunfire sounds when the gun falls to the ground. - (14.06.2020)
+- [x] Automatically add model data to download table. - (21.01.2021)
 
 ### Uncompleted
 
-- [ ] Automatically add model data to download table.
 - [ ] Explosion Add Custom Sound.
 - [ ] Bullet Add Custom Sound.
 - [ ] OOP Design Plugin.
