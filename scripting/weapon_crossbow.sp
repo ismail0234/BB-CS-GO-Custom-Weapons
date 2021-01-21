@@ -17,6 +17,13 @@ public Plugin myinfo =
 	url         = "https://www.botbenson.com"
 };
 
+#define WEAPON_NAME "Crossbow"
+
+#define WEAPON_VIEW_MODEL    "models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl"
+#define WEAPON_WORLD_MODEL   "models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl"
+#define WEAPON_DROPPED_MODEL "models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl"
+#define WEAPON_BULLET_MODEL  "models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl"
+
 #define WEAPON_MAX_ZOOM 2
 
 #define WEAPON_AMMO_LEFT      5
@@ -42,40 +49,12 @@ public Plugin myinfo =
  */
 public void OnPluginStart()
 {
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v_normal.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/hand.vmt");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/hand.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/hand_normal.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt.vmt");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt_normal.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p.vmt");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p_normal.vtf");
-	AddFileToDownloadsTable("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v.vmt");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.dx90.vtx");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.vvd");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.dx90.vtx");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.vvd");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.dx90.vtx");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.phy");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.vvd");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.dx90.vtx");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
-	AddFileToDownloadsTable("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.vvd");
-
-	PrecacheModel("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
-	
-	CustomWeapon weapon = new CustomWeapon("weapon_crossbow");
-
-        weapon.SetName("Cross Bow");
-        weapon.SetViewModel("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl");
-        weapon.SetWorldModel("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl");
-        weapon.SetDroppedModel("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl");
+    	CustomWeapon weapon = new CustomWeapon("weapon_crossbow");
+    	weapon.SetName(WEAPON_NAME);
+    	weapon.SetViewModel(WEAPON_VIEW_MODEL);
+    	weapon.SetWorldModel(WEAPON_WORLD_MODEL);
+    	weapon.SetDroppedModel(WEAPON_DROPPED_MODEL);
+    	weapon.SetBulletModel(WEAPON_BULLET_MODEL);
 
         weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley1.wav");
         weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_foley2.wav");
@@ -86,6 +65,32 @@ public void OnPluginStart()
         weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode3.wav");
         weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode4.wav");
         weapon.AddSound("weapons/eminem/advanced_crossbow/crossbow_explode5.wav");
+
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v_normal.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/hand.vmt");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/hand.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/hand_normal.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt.vmt");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbow_bolt_normal.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p.vmt");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_p_normal.vtf");
+	weapon.AddMaterial("materials/models/weapons/eminem/advanced_crossbow/crossbowex_v.vmt");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.dx90.vtx");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.mdl");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/v_advanced_crossbow.vvd");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.dx90.vtx");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.mdl");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow.vvd");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.dx90.vtx");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.mdl");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.phy");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_advanced_crossbow_dropped.vvd");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.dx90.vtx");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.mdl");
+	weapon.AddMaterial("models/weapons/eminem/advanced_crossbow/w_crossbow_bolt_dropped.vvd");
 
         weapon.SetParentWeapon("weapon_awp");
         weapon.SetDefaultAmmo(WEAPON_AMMO_LEFT, WEAPON_AMMO_RIGHT, WEAPON_AMMO_RIGHT_MAX);
