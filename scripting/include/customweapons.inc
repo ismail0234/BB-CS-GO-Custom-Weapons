@@ -11,7 +11,7 @@
  * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
  *
  */
-methodmap CustomWeapon < ArrayList
+methodmap CustomWeaponx < ArrayList
 {
 	/**
 	 *
@@ -20,7 +20,7 @@ methodmap CustomWeapon < ArrayList
 	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
 	 *
 	 */
-	public native CustomWeapon(char[] weapon);
+	public native CustomWeaponx(char[] weapon);
 
 	/**
 	 *
@@ -57,6 +57,15 @@ methodmap CustomWeapon < ArrayList
 	 *
 	 */
 	public native void AddSound(char[] sound);
+
+	/**
+	 *
+	 * Silaha material ekler.
+	 *
+	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
+	 *
+	 */
+	public native void AddMaterial(char[] material);
 
 	/**
 	 *
@@ -139,7 +148,6 @@ methodmap CustomWeapon < ArrayList
 	 */
 	public native int Register();
 }
-
 
 /**
  *
